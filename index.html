@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Graphic Calculator</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="libs/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    </script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div id="main-container">
+        <canvas id="grid"></canvas>
+        <div id="views-container">
+        </div>
+    </div>
+    <div id="left-panel" style="left:0; width: 300px;">
+        <div id="left-panel-header">FUNCTIONS</div>
+        <div id="input-container"></div>
+        <button id="add-btn" class="btn btn-success">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-plus-lg"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z" />
+            </svg>
+        </button>
+        <div id="step-slider-header">Детализация построения: <div id="step-slider-header-value">1.02</div> point/px
+        </div>
+        <input id="step-slider" type="range" min="1" max="100" value="15" class="slider">
+    </div>
+    <button id="hide-btn" class="btn btn-secondary" style="left: 0; margin-left: 312px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-bar-right"
+            viewBox="0 0 18 18">
+            <path id="button-svg-path" fill-rule="evenodd"
+                d="M13.5,7.5H7.7l2.1-2.1c0.2-0.2,0.2-0.5,0-0.7s-0.5-0.2-0.7,0l-3,3c0,0,0,0,0,0C6,7.8,6,8.2,6.1,8.4l3,3c0.2,0.2,0.5,0.2,0.7,0s0.2-0.5,0-0.7L7.7,8.5h5.8C13.8,8.5,14,8.3,14,8C14,7.7,13.8,7.5,13.5,7.5z M3.5,15C3.2,15,3,14.8,3,14.5v-13C3,1.2,3.2,1,3.5,1S4,1.2,4,1.5v13C4,14.8,3.8,15,3.5,15z" />
+        </svg>
+    </button>
+    <div id="splitter" style="margin-left: 295px;"></div>
+</body>
+
+</html>

@@ -1,0 +1,187 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    user-select: none;
+}
+
+#grid {
+    background-color: white;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.view {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#grid-arrows {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#left-panel {
+    position: absolute;
+    top: 0;
+    height: auto;
+    margin: 6px;
+    padding: 35px 20px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0 10px rgba(0, 0, 0, 0.4);
+    transition: opacity 500ms, left 500ms;
+}
+
+#left-panel.hidden {
+    opacity: 0;
+    transition: opacity 500ms, left 500ms;
+}
+
+#left-panel::hidden {
+    height: 20px;
+}
+
+#left-panel-header {
+    text-align: center;
+    font-size: xx-large;
+    font-family: monospace;
+    margin-bottom: 20px;
+}
+
+.input-line {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.colorpicker {
+    height: 30px;
+    width: 35px;
+    margin-left: 10px;
+    background-color: white;
+    border-radius: 0.375rem;
+    padding: 5px;
+    border-color: rgb(206, 212, 218);
+    cursor: pointer;
+}
+
+#add-btn {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+#step-slider-header {
+    font-size: small;
+    color: rgba(0, 0, 0, 0.5);
+    display: flex;
+}
+
+#step-slider-header-value {
+    width: 30px;
+    margin: 0 5px;
+}
+
+#step-slider {
+    appearance: none;
+    width: 100%;
+}
+
+#step-slider::-webkit-slider-thumb {
+    appearance: none;
+    height: 18px;
+    width: 18px;
+    border-radius: 20px;
+    background-color: #ccc;
+    margin-top: -6px;
+    transition: background-color 200ms;
+}
+
+#step-slider::-webkit-slider-thumb:hover {
+    background-color: #555;
+    transition: background-color 200ms;
+}
+
+#step-slider::-webkit-slider-runnable-track {
+    background-color: #ccc;
+    height: 6px;
+    border-radius: 3px;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0.3rem 0.2rem rgb(0 0 0 / 20%);
+}
+
+.intellisense-container {
+    position: absolute;
+    left: 26px;
+    background-color: white;
+    /* width: 218.66px; */
+    width: 270px;
+    max-height: 400px;
+    padding: 10px 10px;
+    border-radius: 10px;
+    overflow: auto;
+    box-shadow: 0px 0 10px rgba(0, 0, 0, 0.4);
+    cursor: default;
+}
+
+.hint {
+    font-size: small;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/* .intellisense-container::-webkit-scrollbar {
+    width: 12px;
+    margin: 10px;
+}
+
+.intellisense-container::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    /*border: 3px solid white;
+} */
+
+.intellisense-container::-webkit-scrollbar {
+    width: 5px;
+}
+
+.intellisense-container::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0)
+}
+
+.intellisense-container::-webkit-scrollbar-thumb {
+    /* background-color: rgba(0, 0, 0, 0.2); */
+    background-image: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0) 5%,
+            rgba(0, 0, 0, 0.2) 10%,
+            rgba(0, 0, 0, 0.2) 90%,
+            rgba(0, 0, 0, 0) 95%,
+            rgba(0, 0, 0, 0));
+    border-radius: 5px;
+}
+
+#hide-btn {
+    position: absolute;
+    top: 20px;
+    padding: 6px 6px;
+    border-radius: 10px;
+    opacity: 0.6;
+    box-shadow: 0px 0 10px rgba(0, 0, 0, 0.4);
+    transition: left 500ms;
+}
+
+#splitter {
+    position: absolute;
+    cursor: e-resize;
+    width: 10px;
+    top: 20px;
+}
+
+.input-group .btn {
+    z-index: 0;
+}
